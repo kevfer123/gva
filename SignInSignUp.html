@@ -142,7 +142,7 @@
         }
 
         body {
-            font-family: Segoe UI,SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+            font-family: "Work-Sans", sans-serif;
             background-attachment: fixed;
             background-color: #fff;
             background-position: center;
@@ -173,7 +173,6 @@
         }
 
         .container {
-            text-align: center;
             width: 100%;
             display: table;
             height: 100vh;
@@ -1002,11 +1001,99 @@ div.api_container{
     width: 100%!important
 }
 </style>
+
+<!-- custom GVA Form-->
+<style>
+    html {
+        font-family: "Work Sans", sans-serif;
+    }
+    .entry {
+        text-transform: uppercase;
+    }
+    input {
+        background: 0 0;
+        max-width: 100%;
+        margin-top: 0.4375rem;
+        margin-bottom: 1.5rem;
+        text-transform: none;
+        padding: 8px 12px;
+        font-size: .75rem;
+        padding-right: 0;
+
+        border: 1px solid #ccc;
+        height: 2.4375rem;
+        width: 100%;
+        box-sizing: border-box;
+        transition: box-shadow .5s,border-color .25s ease-in-out;
+        color: #010101;
+        font-weight: 400;
+        line-height: 1.5; 
+        border-radius: 0;
+    }
+
+    input::placeholder {
+        color: transparent;
+    }
+
+    input:focus {
+        outline: 0;
+        border: 1px solid #333;
+    }
+
+    label {
+        color: #333;
+        font-family: "Work Sans", sans-serif;
+        font-weight: 400;
+        line-height: 1.8;
+        font-size: .75rem;
+    }
+
+    button {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 0 1rem 0;
+        padding: .85em 1em;
+        border: 1px solid transparent;
+        border-radius: 0;
+        transition: background-color .25s ease-out,color .25s ease-out;
+        font-family: inherit;
+        font-size: .9rem;
+        -webkit-appearance: none;
+        line-height: 1;
+        text-align: center;
+        cursor: pointer;
+        text-transform: uppercase;
+        width: 100%;
+        background: #0074a8;
+        color: #fff;
+    }
+
+    label::after {
+        content: '*';
+    }
+    /* Change the order of the items */
+    .entry-item {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.8;
+    }
+
+    .entry-item .error {
+        order: 3;
+    }
+
+</style>
+
+<!-- custom GVA Style, mainly used to change the DOM and the-->
+<script>
+
+</script>
+
 </head>
 <body>
-    <div id="background_branding_container" data-tenant-branding-background-color="true">
+    <!-- <div id="background_branding_container" data-tenant-branding-background-color="true">
         <img data-tenant-branding-background="true" src="https://login.microsoftonline.com/templates/src/backgrounds/1-1.png" alt="Illustration" />
-    </div>
+    </div> -->
     <div class="container  unified_container " role="presentation">
         <div class="row">
             <div class="col-lg-6">
