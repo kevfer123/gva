@@ -674,7 +674,6 @@
         /* endinject */
     </style>
 
-
     <style>
         /* Following are generated styles via gulp. */
         /* inject: css */
@@ -951,10 +950,7 @@
                                     height: 40px
                                 }
 
-                                .unified_container .row .panel-default .panel-body #api .localAccount .entry .entry-item #password {
-                                    height: 40px
-                                }
-
+            
                                 .unified_container .row .panel-default .panel-body #api .localAccount .entry .entry-item:nth-child(2) {
                                     width: auto;
                                     float: left
@@ -1006,9 +1002,6 @@ div.api_container{
     width: 100%!important
 }
 </style>
-        <link href="https://gva.ch/CMSPages/GetResource.ashx?stylesheetfile=/Gva/css/app.css" type="text/css" rel="stylesheet" />
-    <link href="https://gva.ch/CMSPages/GetCSS.aspx?stylesheetname=100ans" type="text/css" rel="stylesheet">
-    <link href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <div id="background_branding_container" data-tenant-branding-background-color="true">
@@ -1016,14 +1009,60 @@ div.api_container{
     </div>
     <div class="container  unified_container " role="presentation">
         <div class="row">
-
             <div class="col-lg-6">
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <img class="companyLogo" data-tenant-branding-logo="true" src="https://login.microsoftonline.com/templates/src/images/logo.svg" alt="Company Logo">
-                        <div id="api" role="main">
+                        <div id="api" data-name="Unified" role="main" class="form">
+                            <div class="heading">
+                              <h1 role="heading">Sign in</h1>
+                            </div>
+                            <form id="localAccountForm" class="localAccount" aria-label="Sign in with your email address">
+                              <div class="intro">
+                                <h2>
+                                  Sign in with your email address
+                                </h2>
+                              </div>
+                              <div class="error pageLevel" aria-hidden="true" role="alert">
+                                <p></p>
+                              </div>
+                              <div class="entry">
+                                <div class="entry-item">
+                                  <label for="signInEmail">
+                                    Email Address
+                                  </label>
+                                  <div class="error itemLevel" aria-hidden="true" role="alert">
+                                    <p></p>
+                                  </div>
+                                  <input type="email" id="signInEmail" name="Email Address" title="Please enter a valid email address" autofocus="" placeholder="Email Address" aria-label="Email Address">
+                                </div>
+                                  <div class="entry-item">
+                                    <div class="password-label">
+                                      <label for="password">Password</label>
+                                          <a id="forgotPassword" href="/gva2204b2cdev.onmicrosoft.com/B2C_1A_signup_signin/api/CombinedSigninAndSignup/unified?claimsexchange=ForgotPasswordExchange&amp;csrf_token=YTlyd0hBenFUaFVwRVkzRUp5TXpMT1E2eEQ4L0kwcmg3U05XalV6TFhOTVNMSWk4MDErR1NXclN5MjRZcXdkMzBmTW1PZlFnUzVZZHRXT1FNOWFTWVE9PTsyMDI0LTAzLTA0VDEzOjEzOjA5LjgyODQ3NTlaO1VoRDQxc3FhNkxyTWZxeWlibng4bWc9PTt7Ik9yY2hlc3RyYXRpb25TdGVwIjoxfQ==&amp;tx=StateProperties=eyJUSUQiOiJkNTZiNTcyNS05Y2Y0LTQ1NTAtYTg2ZC1kNTM4OTE3ODE0NzUifQ&amp;p=B2C_1A_signup_signin">Forgot your password?</a>
+                                                    </div>
+                                    <div class="error itemLevel" aria-hidden="true">
+                                      <p role="alert"></p>
+                                    </div>
+                                    <input type="password" id="password" name="Password" placeholder="Password" aria-label="Password" autocomplete="current-password" aria-required="true">
+                                                </div>
+                                <div class="working"></div>
+                      
+                      
+                                <div class="buttons">
+                                  <button id="next" type="submit" form="localAccountForm">Sign in</button>
+                                </div>
+                              </div>
+                                    <div class="divider">
+                                      <h2>OR</h2>
+                                    </div>
+                                    <div class="create">
+                                      <p>
+                                        Don't have an account?<a id="createAccount" href="/gva2204b2cdev.onmicrosoft.com/B2C_1A_signup_signin/api/CombinedSigninAndSignup/unified?local=signup&amp;csrf_token=YTlyd0hBenFUaFVwRVkzRUp5TXpMT1E2eEQ4L0kwcmg3U05XalV6TFhOTVNMSWk4MDErR1NXclN5MjRZcXdkMzBmTW1PZlFnUzVZZHRXT1FNOWFTWVE9PTsyMDI0LTAzLTA0VDEzOjEzOjA5LjgyODQ3NTlaO1VoRDQxc3FhNkxyTWZxeWlibng4bWc9PTt7Ik9yY2hlc3RyYXRpb25TdGVwIjoxfQ==&amp;tx=StateProperties=eyJUSUQiOiJkNTZiNTcyNS05Y2Y0LTQ1NTAtYTg2ZC1kNTM4OTE3ODE0NzUifQ&amp;p=B2C_1A_signup_signin">Sign up now</a>
+                                      </p>
+                                    </div>
+                            </form>
                         </div>
-                        Hi mom, I'm on tv
                     </div>
                 </div>
             </div>
