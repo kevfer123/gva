@@ -158,7 +158,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            z-index: 0;
+            z-index: -1;
             position: fixed;
             left: 0;
             overflow: hidden;
@@ -783,14 +783,7 @@
             }
         }
 
-        .unified_container .row .panel-default #api .localAccount .entry .entry-item .password-label #forgotPassword {
-            position: absolute;
-            bottom: 0;
-            clear: right;
-            cursor: pointer;
-            text-align: right
-        }
-
+      
         .unified_container .row .panel-default #api .localAccount .rememberMe {
             margin-top: -2rem;
             text-align: right;
@@ -997,6 +990,10 @@ div.api_container{
 
 <!-- custom GVA Form-->
 <style>
+
+    #forgotPassword {
+
+    }
     html {
         font-family: "Work Sans", sans-serif;
     }
