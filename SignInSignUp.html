@@ -810,12 +810,6 @@
             display: none
         }
 
-        .unified_container .row .panel-default #api .claims-provider-list-text-links p, .unified_container .row .panel-default #api .localAccount .create p {
-            text-align: left;
-            margin-top: -3rem;
-            margin-bottom: 3rem
-        }
-
         .unified_container .row .panel-default #api .localAccount .create #createAccount {
             border-radius: .5rem;
             display: inline-block;
@@ -988,7 +982,6 @@
     </style>
 
 <style>
-    <!-- IFrame version -->
     div.social, div.divider {
     display: none;
 }
@@ -1066,6 +1059,7 @@ div.api_container{
         width: 100%;
         background: #0074a8;
         color: #fff;
+        font-size: 12px;
     }
 
     label::after {
@@ -1084,11 +1078,6 @@ div.api_container{
 
 </style>
 
-<!-- custom GVA Style, mainly used to change the DOM and the-->
-<script>
-
-</script>
-
 </head>
 <body>
     <!-- <div id="background_branding_container" data-tenant-branding-background-color="true">
@@ -1101,54 +1090,7 @@ div.api_container{
                     <div class="panel-body">
                         <img class="companyLogo" data-tenant-branding-logo="true" src="https://login.microsoftonline.com/templates/src/images/logo.svg" alt="Company Logo">
                         <div id="api" data-name="Unified" role="main" class="form">
-                            <div class="heading">
-                              <h1 role="heading">Sign in</h1>
-                            </div>
-                            <form id="localAccountForm" class="localAccount" aria-label="Sign in with your email address">
-                              <div class="intro">
-                                <h2>
-                                  Sign in with your email address
-                                </h2>
-                              </div>
-                              <div class="error pageLevel" aria-hidden="true" role="alert">
-                                <p></p>
-                              </div>
-                              <div class="entry">
-                                <div class="entry-item">
-                                  <label for="signInEmail">
-                                    Email Address
-                                  </label>
-                                  <div class="error itemLevel" aria-hidden="true" role="alert">
-                                    <p></p>
-                                  </div>
-                                  <input type="email" id="signInEmail" name="Email Address" title="Please enter a valid email address" autofocus="" placeholder="Email Address" aria-label="Email Address">
-                                </div>
-                                  <div class="entry-item">
-                                    <div class="password-label">
-                                      <label for="password">Password</label>
-                                          <a id="forgotPassword" href="/gva2204b2cdev.onmicrosoft.com/B2C_1A_signup_signin/api/CombinedSigninAndSignup/unified?claimsexchange=ForgotPasswordExchange&amp;csrf_token=YTlyd0hBenFUaFVwRVkzRUp5TXpMT1E2eEQ4L0kwcmg3U05XalV6TFhOTVNMSWk4MDErR1NXclN5MjRZcXdkMzBmTW1PZlFnUzVZZHRXT1FNOWFTWVE9PTsyMDI0LTAzLTA0VDEzOjEzOjA5LjgyODQ3NTlaO1VoRDQxc3FhNkxyTWZxeWlibng4bWc9PTt7Ik9yY2hlc3RyYXRpb25TdGVwIjoxfQ==&amp;tx=StateProperties=eyJUSUQiOiJkNTZiNTcyNS05Y2Y0LTQ1NTAtYTg2ZC1kNTM4OTE3ODE0NzUifQ&amp;p=B2C_1A_signup_signin">Forgot your password?</a>
-                                                    </div>
-                                    <div class="error itemLevel" aria-hidden="true">
-                                      <p role="alert"></p>
-                                    </div>
-                                    <input type="password" id="password" name="Password" placeholder="Password" aria-label="Password" autocomplete="current-password" aria-required="true">
-                                                </div>
-                                <div class="working"></div>
-                      
-                      
-                                <div class="buttons">
-                                  <button id="next" type="submit" form="localAccountForm">Sign in</button>
-                                </div>
-                              </div>
-                                    <div class="divider">
-                                      <h2>OR</h2>
-                                    </div>
-                                    <div class="create">
-                                      <p>
-                                        Don't have an account?<a id="createAccount" href="/gva2204b2cdev.onmicrosoft.com/B2C_1A_signup_signin/api/CombinedSigninAndSignup/unified?local=signup&amp;csrf_token=YTlyd0hBenFUaFVwRVkzRUp5TXpMT1E2eEQ4L0kwcmg3U05XalV6TFhOTVNMSWk4MDErR1NXclN5MjRZcXdkMzBmTW1PZlFnUzVZZHRXT1FNOWFTWVE9PTsyMDI0LTAzLTA0VDEzOjEzOjA5LjgyODQ3NTlaO1VoRDQxc3FhNkxyTWZxeWlibng4bWc9PTt7Ik9yY2hlc3RyYXRpb25TdGVwIjoxfQ==&amp;tx=StateProperties=eyJUSUQiOiJkNTZiNTcyNS05Y2Y0LTQ1NTAtYTg2ZC1kNTM4OTE3ODE0NzUifQ&amp;p=B2C_1A_signup_signin">Sign up now</a>
-                                      </p>
-                                    </div>
-                            </form>
+                            
                         </div>
                     </div>
                 </div>
