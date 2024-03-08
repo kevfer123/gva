@@ -787,6 +787,7 @@ div.api_container{
 
 </style>
 
+
 </head>
 <body>
     <div id="background_branding_container" data-tenant-branding-background-color="true">
@@ -807,4 +808,12 @@ div.api_container{
         </div>
     </div>
 </body>
+<script>
+    (function() {
+        let forgotPwd = document.getElementById("forgotPassword");
+        let destination = forgotPwd.parentElement.parentElement.parentElement;
+        destination.append(forgotPwd);
+
+    })();
+</script>
 </html>
