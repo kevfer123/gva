@@ -683,6 +683,10 @@ div.api_container{
         color: transparent;
     }
 
+    input:not(#email) {
+        margin-bottom: 1.5rem;
+    }
+
     input:focus {
         outline: 0;
         border: 1px solid #333;
@@ -761,13 +765,13 @@ div.api_container{
 
     /* Align the fields next to each other */
     #attributeList li:not(.VerificationControl):not(.email) {
-        width: 50%;
-        float:left;
     }
 
     .buttons {
         display: flex;
         gap: 0.4375rem;
+        margin-top: 1.5rem;
+
     }
 
 </style>
