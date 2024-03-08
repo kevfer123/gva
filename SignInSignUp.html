@@ -378,15 +378,6 @@
                 width: 100%
             }
 
-                .unified_container .row .panel-default #api .intro {
-                    display: block;
-                    text-align: left
-                }
-
-                    .unified_container .row .panel-default #api .intro h2 {
-                        font-size: 20px
-                    }
-
                 .unified_container .row .panel-default #api .divider {
                     display: none
                 }
@@ -659,7 +650,7 @@ div.api_container{
 
     
     /* Force the errors to take the space even when not displayed to prevent flickering */
-    .error[style*="display: none;"] {
+    .error[style*="display: none;"], .working[style*="display: none;"] {
         display: block !important;
         visibility: hidden !important;
     }
