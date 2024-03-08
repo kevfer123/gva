@@ -653,10 +653,12 @@ div.api_container{
     }
 
     .error p, .attrEntry .error {
+        color: #b00;
         margin-bottom: 0;
         margin-top: 0.4375rem;
         margin-block: 0;
-        height: 21px; 
+        min-height: 21px;
+        font-size: 12px;
     }
 /*     
     .entry .entry-item:not(:nth-last-child(2)) {
@@ -744,7 +746,6 @@ div.api_container{
     .entry-item, .attrEntry {
         display: flex;
         flex-direction: column;
-        line-height: 1.8;
     }
 
     .error {
@@ -771,7 +772,7 @@ div.api_container{
     }
 
 
-    .working[style=""] {
+    .working:not([style]) {
         visibility: hidden;
     }
 
