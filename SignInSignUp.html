@@ -801,9 +801,12 @@ div.api_container{
         if (verificationSuccessMessage !== undefined && verificationSuccessMessage !== null) {
                 let observer = new MutationObserver((mutations) => {
                 mutations.forEach((mutation) => {
+                    console.log("hello");
                     if (mutation.type == "attributes") {
                         return;
                     }
+                    console.log("hello2");
+
                     // Click the continue button if the success message has been shown
                     let isShown = mutation.target.getAttribute('aria-hidden') == "false"; 
                     if (isShown) {
