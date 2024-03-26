@@ -793,32 +793,30 @@ div.api_container{
 
 <script>
     function setup() {
-    // In cases such as the email verification, automatically click the "continue" button when the code has been validated
-    let verificationSuccessMessage = document.getElementById("continue");
-            let continueButton = document.getElementById("emailVerificationControl_but_change_claim");
-            let MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
-            console.log("helo");
-            console.log(verificationSuccessMessage);
+        // In cases such as the email verification, automatically click the "continue" button when the code has been validated
+        let verificationSuccessMessage = document.getElementById("emailVerificationControl_success_message");
+        let continueButton = document.getElementById("continue");
+        let MutationObserver = window.MutationObserver || window.WebKitMutationObserver ||  window.MozMutationObserver;
 
-            if (verificationSuccessMessage !== undefined && verificationSuccessMessage !== null) {
-                    let observer = new MutationObserver((mutations) => {
-                    mutations.forEach((mutation) => {
-                        if (mutation.type == "attributes") {
-                            return;
-                        }
-                        // Click the continue button if the success message has been shown
-                        let isShown = mutation.target.getAttribute('aria-hidden') == "false"; 
-                        if (isShown) {
-                            continueButton.click();
-                        }
-                    });
-                })
-
-                observer.observe(verificationSuccessMessage, {
-                    attributes: true,
-                    attributeFilter: ["aria-hidden"]
+        if (verificationSuccessMessage !== undefined && verificationSuccessMessage !== null) {
+                let observer = new MutationObserver((mutations) => {
+                mutations.forEach((mutation) => {
+                    if (mutation.type == "attributes") {
+                        return;
+                    }
+                    // Click the continue button if the success message has been shown
+                    let isShown = mutation.target.getAttribute('aria-hidden') == "false"; 
+                    if (isShown) {
+                        continueButton.click();
+                    }
                 });
-            }
+            })
+
+            observer.observe(verificationSuccessMessage, {
+                attributes: true,
+                attributeFilter: ["aria-hidden"]
+            });
+        }
     }
     (function onPageReady() {
         var intervalHandle = setInterval(
