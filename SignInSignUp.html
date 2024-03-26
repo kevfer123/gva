@@ -807,6 +807,8 @@ div.api_container{
                     // Click the continue button if the success message has been shown
                     let isShown = mutation.target.getAttribute('aria-hidden') == "false"; 
                     if (isShown) {
+                        console.log(continueButton);
+                        console.log(verificationSuccessMessage);
                         continueButton.click();
                     }
                 });
