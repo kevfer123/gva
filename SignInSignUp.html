@@ -798,19 +798,21 @@ div.api_container{
         let verificationSuccessMessage = document.getElementById("emailVerificationControl_success_message");
         let continueButton = document.getElementById("emailVerificationControl_but_change_claim");
         let MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
+        console.log("helo");
         console.log(verificationSuccessMessage);
+
         if (verificationSuccessMessage !== undefined && verificationSuccessMessage !== null) {
-            let observer = new MutationObserver((mutations) => {
-            mutations.forEach((mutation) => {
-                if (mutation.type == "attributes") {
-                    return;
-                }
-                // Click the continue button if the success message has been shown
-                let isShown = mutation.target.getAttribute('aria-hidden') == "isShown"; 
-                if (isShown) {
-                    continueButton.click();
-                }
-            });
+                let observer = new MutationObserver((mutations) => {
+                mutations.forEach((mutation) => {
+                    if (mutation.type == "attributes") {
+                        return;
+                    }
+                    // Click the continue button if the success message has been shown
+                    let isShown = mutation.target.getAttribute('aria-hidden') == "isShown"; 
+                    if (isShown) {
+                        continueButton.click();
+                    }
+                });
             })
 
             observer.observe(verificationSuccessMessage, {
