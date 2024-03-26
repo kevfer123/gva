@@ -801,7 +801,7 @@ div.api_container{
         if (verificationSuccessMessage !== undefined && verificationSuccessMessage !== null) {
                 let observer = new MutationObserver((mutations) => {
                 mutations.forEach((mutation) => {
-                    console.log("hello");
+                    console.log(mutation);
                     if (mutation.type == "attributes") {
                         return;
                     }
